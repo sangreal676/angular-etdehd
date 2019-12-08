@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+
+<div *ngIf="pokazKomunikaty">
+<div *ngFor="let k of komunikaty">
+  <div *ngIf="k.wazny, else elseBlock">
+  WAŻNE! {{k.waznosc}} {{k.tresc}} ({{k.dataDodania | date:'medium'}})
+  </div>
+  <ng-template #elseBlock>
+    {{k.waznosc}} {{k.tresc}} ({{k.dataDodania | date:'medium'}})
+  </ng-template>
+</div>
