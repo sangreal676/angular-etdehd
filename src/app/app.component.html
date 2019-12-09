@@ -1,5 +1,7 @@
 <hello name="{{ name }}"></hello>
-
+<p>
+  Zadanie 2
+</p>
 <div *ngIf="pokazKomunikaty">
 <div *ngFor="let k of komunikaty">
   <div *ngIf="k.wazny, else elseBlock">
@@ -10,4 +12,8 @@
   </ng-template>
 </div>
 <p>
-  </p>
+  Zadanie 3
+</p>
+<div *ngFor="let komunikat of komunikaty">
+  <komunikat [komunikat]="komunikat"></komunikat>
+</div>
